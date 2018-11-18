@@ -9,6 +9,10 @@ func main() {
 		for {
 			for {
 				break L
+				/**
+				This never gets here.
+				*/
+				fmt.Println("hello")
 			}
 		}
 		fmt.Printf("%d\n", i)
