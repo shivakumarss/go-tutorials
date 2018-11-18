@@ -14,22 +14,21 @@ func main() {
 	closure("A Message")
 
 	closure("Another Message")
-	m :=thisisFunction()
+	m := thisisFunction()
 	fmt.Println(m)
 
 }
 
-func thisisFunction()(int)  {
+func thisisFunction() int {
 
-	_, k:="shiva", 123
+	_, k := "shiva", 123
 	return k
-
 }
 
 func printf(str string, args ...interface{}) (int, error) {
 
 	// println returns number of bytes written and error  2 params.
-	// Here we ignore 
+	// Here we ignore
 	_, err := fmt.Printf(str, args...)
 	return len(args), err
 }
