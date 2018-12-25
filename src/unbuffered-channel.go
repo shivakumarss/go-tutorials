@@ -17,6 +17,10 @@ func main() {
 	ch <- "cmd.1"
 	ch <- "cmd.2"
 	ch <- "cmd.4"
-	ch <- "cmd.2" //won't be processed
-	time.Sleep(time.Duration(1))
+	ch <- "cmd.3" //won't be processed
+	ch <- "cmd.5" //won't be processed
+
+	time.Sleep(time.Duration(10))
+	//time.Sleep(time.Duration(10000) )
+	fmt.Println("Done")
 }
