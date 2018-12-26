@@ -15,7 +15,6 @@ func main() {
 	fmt.Println("rPrevious value ", previousValue)
 	go isReady2("Coffee", 2)
 	go isReady2("Tea", 1)
-
 	var i int
 
 L:
@@ -30,10 +29,6 @@ L:
 		}
 
 	}
-
-	//time.Sleep(time.Duration(3) * time.Second)
-	//<-c1
-	//<-c1
 
 }
 

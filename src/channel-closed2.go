@@ -7,7 +7,9 @@ import (
 
 func main() {
 	ch := make(chan int)
+
 	done := make(chan struct{})
+
 	for i := 0; i < 3; i++ {
 		go func(idx int) {
 			select {

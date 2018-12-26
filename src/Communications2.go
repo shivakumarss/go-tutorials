@@ -3,6 +3,7 @@ package main
 import (
 	"bufio"
 	"os"
+	"os/exec"
 )
 
 func main() {
@@ -20,7 +21,10 @@ func main() {
 			break
 		}
 		w.Write(buf[0:n])
-
 	}
+
+	cmd := exec.Command("/bin/ls", "-l")
+	b, _ := cmd.Output()
+	w.Write(b)
 
 }
