@@ -1,8 +1,14 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"os"
+)
 
 func main() {
+
+	type foo int
+
 	count := 1
 	closure := func(msg string) {
 		noOfArgs, ErroMsg := printf("%d %s\n", count, msg)
@@ -17,6 +23,13 @@ func main() {
 	m := thisisFunction()
 	fmt.Println(m)
 
+}
+
+func NewFile(fd int, name string) *File {
+	if fd < 0 {
+		return nil
+	}
+	os.NewFile()
 }
 
 func thisisFunction() int {
