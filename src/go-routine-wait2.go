@@ -6,6 +6,7 @@ import (
 )
 
 func main() {
+
 	var wg sync.WaitGroup
 	done := make(chan struct{})
 	wq := make(chan interface{})
@@ -29,7 +30,7 @@ func doitv2(workerId int, wq <-chan interface{}, done <-chan struct{}, wg *sync.
 	fmt.Printf("[%v] is running\n", workerId)
 	defer wg.Done()
 	for {
-		select {
+		select { // sync the channels. between threads.
 		case m := <-wq:
 			fmt.Printf("[%v] m => %v\n", workerId, m)
 		case <-done:
